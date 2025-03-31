@@ -36,9 +36,7 @@ $$
 When an item is **Stocked**, we place larger, less-frequent orders, so we reduce the number of replenishments—but we pay an additional carrying cost because we hold inventory.
 
 $$
-\text{Stock Cost}
-= \underbrace{\text{Cost to Replenish (Stock)}}_{\text{(A)}}
-+ \underbrace{\text{Cost to Carry (Stock)}}_{\text{(B)}}
+\text{Stock Cost} = \text{Cost to Replenish (Stock)} + \text{Cost to Carry (Stock)}
 $$
 
 ### 2(A) Cost to Replenish (Stock)
@@ -52,10 +50,9 @@ Where:
 
 - **Number of Orders per Year** is computed by dividing the total quantity sold per year by the order quantity $\text{OQ}$:
   
-  $$
-  \text{Number of Orders per Year}
-  = \frac{\text{Quantity Sold per Year}}{\text{OQ}}
-  $$
+$$
+\text{Number of Orders per Year} = \frac{\text{Quantity Sold per Year}}{\text{OQ}}
+$$
 
 ### 2(B) Cost to Carry (Stock)
 
@@ -69,10 +66,10 @@ $$
   2. It then gradually depletes at a steady rate until we reorder.  
   3. The average of that cycle is often taken to be $\frac{\text{OQ}}{2}$ above the safety stock.
   
-  $$
-  \text{Average On-Hand Quantity}
-  = \frac{\text{OQ}}{2} + \text{Safety Stock}
-  $$
+$$
+\text{Average On-Hand Quantity}
+= \frac{\text{OQ}}{2} + \text{Safety Stock}
+$$
 
 - **Carrying-Cost Rate** ($K\text{-Cost}$) is the annual fraction of the inventory’s value that you pay in holding costs (e.g. cost of capital, storage, shrinkage, insurance, etc.).
 
@@ -113,11 +110,10 @@ $$
 Real-world scenarios often impose minimum and maximum bounds on the EOQ (for example, if we can’t order more than 12 months’ usage or we don’t want fewer than half a month’s usage). Symbolically:
 
 $$
-\text{OQ}
-= \max\Bigl(\,
-  \min\bigl(\text{EOQ},\, \text{MaxThreshold}\bigr), \,
+\text{OQ} = \max\left(
+  \min\left(\text{EOQ},\ \text{MaxThreshold}\right),\ 
   \text{MinThreshold}
-\Bigr)
+\right)
 $$
 
 Where:
